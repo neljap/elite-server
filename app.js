@@ -1,7 +1,12 @@
 const express = require("express")
 const app = express()
+const cors = require("cors")
 
-app.use("/api/v1/user", tourUser)
 
+const tourRouter = require("./routers/userRoute")
+
+
+
+app.use("/api/v1/user", tourRouter)
 
 module.exports = app;
